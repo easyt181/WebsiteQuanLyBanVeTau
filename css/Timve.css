@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* common */
+html {
+    font-family: sans-serif !important;
+}
+.err{
+    margin: 0 8px !important;
+}
+.err p {
+    font-size: 12px;
+    color: red;
+}
+.hidden{
+    display: none !important;
+}
+.disabled{
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+.line{
+    height: 2px;
+    margin: 1em 0;
+    background-color: #000;
+}
+/* header */
+#header{
+    background-color: #000;
+    height: 120px;
+}
+
+/* container */
+#body>.container  {
+    margin-top: 120px !important;
+}
+.container .form-tickets  #title,
+.container .trains  #title {
+   
+    width: 100%;
+    height: 94px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+/* container-tickets */
+.container .tickets{
+    font-weight: 600; 
+    background-color: rgba(241, 241, 241, 0.7);
+}
+.container .tickets form div{
+    margin: 8px 8px;
+}
+.container .tickets .input-ticket div{
+    margin: 0;
+    height: 57px;
+}
+.container .tickets .input-ticket input{
+    padding: 10px;
+    position: relative;
+}
+.container .tickets .btn-ticket{
+    margin: 0;
+    text-align: center;
+}
+.container .tickets .btn-ticket input{
+    margin-top: 25px;
+    margin-bottom: 24px;
+    padding: 10px;
+    width: 324px;
+    font-size: 24px;
+    background-color: #3D8F17;
+    text-transform: uppercase;
+    border: none;
+}
+/* container-trains */
+.container .trains .title-train {
+    margin-top: 25px;
+}
+.container .trains .table-trains table{
+    border:1px solid  #ccc;
+    box-shadow: 1px 1px 5px 2px #ccc;
+}
+.container .trains .table-trains thead th{
+    font-size: 16px;
+   text-transform: uppercase;
+   text-align: center;
+}
+.container .trains .table-trains tbody td{
+    border:1px solid  #ccc;
+    font-size: 16px;
+}
+/* footer */
+.footer{
+    margin-top:50px;
+    height: 500px;
+    width: 100%;
+    background-color: #686868;
+    color:white;
+}
+
+.footer .footertop >.col-4{
+    padding-top:50px; 
+}
+.footer a{
+    text-decoration: none;
+    color: #D9F80F;
+}
+
+.footerbot{
+    padding-top:10px;
+    height: 70px;
+    background-color: black;
+    text-align: center;
+}
+.footerbot p{
+    color:white;
+}
+/* php */
+.drop_item{
+    margin: 0!important;
+}
+.drop_item ul {
+    position: absolute;
+    background-color: #fff;
+    z-index: 10;
+    padding: 5px 10px;
+    margin: 0;
+    width: 10%;
+}
+.drop_item ul li{
+    padding: 5px;
+    text-transform: capitalize;
+    list-style-type: none;
+    font-weight: 400;
+}
+.drop_item ul li:hover{
+    background-color: rgba(0, 145, 212, 0.8);
+    color: #fff;
+    cursor: pointer;
+}

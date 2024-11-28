@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* common */
+html {
+    font-family: sans-serif !important;
+}
+
+.line{
+    height: 2px;
+    margin: 1em 0;
+    background-color: #000;
+}
+
+
+/* title */
+
+.content #title {
+    top: 0;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+
+}
+.container #title .title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+/* container */
+.content{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.content .background-login img{
+    width: 1440px;
+    height: 800px;
+    
+}
+.content .form-login{
+    width: 775px;
+    height: 425px;
+    padding: 25px 100px;
+    background-color: rgba(217, 217, 217, 0.8);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content .form-login .login form {
+    width: 100%;
+}
+.content .form-login .login .user input,
+.content .form-login .login .password input{
+    padding: 10px;
+}
+.content .form-login .login .user label,
+.content .form-login .login .password label{
+    font-weight: bold;
+}
+.content .save{
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.content .save{
+    font-weight: 600;
+}
+.content .form-btn{
+    float: right;
+
+}
+.content .form-btn input{
+    width: 117px;
+    height: 44px;
+    margin-top: 25px;
+}

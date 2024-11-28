@@ -1,0 +1,25 @@
+.footer{
+    margin-top:50px;
+    height: 500px;
+    width: 100%;
+    background-color: #686868;
+    color:white;
+}
+
+.footer .footertop >.col-4{
+    padding-top:50px; 
+}
+.footer a{
+    text-decoration: none;
+    color: #D9F80F;
+}
+
+.footerbot{
+    padding-top:10px;
+    height: 70px;
+    background-color: black;
+    text-align: center;
+}
+.footerbot p{
+    color:white;
+}

@@ -1,0 +1,567 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* common */
+.disabled_{
+    opacity: 0.7;
+    cursor: not-allowed !important;
+}
+.price {
+    display: none;   
+    width: 170px;
+    z-index: 10;
+    transform: translateY(-80%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    position: absolute;
+    background-color: #fff;
+  }
+
+ .price .arow::after{
+    content: "";
+      position: absolute;
+      border-width: 8px;
+      bottom: -16px;
+      left: 48%;
+      transform: translateX(-50%);
+      border-color: #000 transparent transparent transparent;
+      border-style: solid;
+ }
+.seat{
+    position: relative;
+}
+
+.price h3{
+    margin: 0;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 5px 5px 0 0;
+    font-weight: 400!important;
+    color: #0d0b0b!important;
+    line-height: 18px;
+    border-bottom: 1px solid #ebebeb;
+    background-color: #f7f7f7;
+  }
+.price{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: start;
+}
+.price .price_{
+    padding: 10px;
+    font-weight: 600;
+    color: #000 !important;
+  }
+.sold{
+    border: 1px solid #ccc!important;
+    background-color: rgba(223, 83, 39,1)!important;
+    color: #fff!important;
+}
+.sold_{
+    background-color: #a6b727 !important;
+    border:  1px solid  #ccc!important;
+    color: #fff!important;
+}
+
+.hidden{
+    display: none !important;
+}
+.show{
+    display: block !important;
+}
+
+:root{
+    --blue: rgba(0, 145, 212, 1);
+    --blue-dark:rgba(49, 126, 172, 1);
+    --blue-bland:rgba(204, 233, 246, 1);
+}
+.disabled{
+    display: none;
+    cursor: alias;
+}
+.select_train{
+    background-color: var(--blue)!important;
+}
+.select_carriage{
+    background-color: #a6b727 !important;
+}
+.ticket_empty{
+    background-color: rgba(223, 83, 39, 0.2) !important;
+}
+.line{
+    width: 4px;
+    background-color: #948a54;
+    height: 100%;
+    border-radius: 10px;
+}
+.line_ {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.line_ div{
+    width: 10px;
+    background-color: #ccc;
+    height: 69px;
+    border-radius: 10px;
+}
+/* header */
+
+
+
+/* body */
+#body >.container{
+    margin-top: 130px;
+    display: flex;
+}
+.tickets {
+    max-width: 80%;
+}
+.tickets>.title{
+    padding: 5px 20px 5px 10px;
+    border-radius:0 3px 3px 0;
+    margin: 0 0 20px;
+    background-color: var(--blue-dark);
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+.tickets>.title h5{
+    margin: 0;
+}
+.tickets .trains .content_train{
+    display: flex;
+}
+.tickets .trains .train{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    padding: 0 5px;
+    margin-right: 15px;
+    background-color: #ccc;
+}
+.tickets .trains .content_train .train:hover{
+    cursor: pointer;
+}
+.tickets .trains .content_train .train:hover .name,
+.tickets .trains .content_train .train:hover .circle{
+    
+    background-color: #fec306;
+}
+.tickets .trains .train .name_train{
+    text-align: center;
+    margin-top: 5px;
+}
+.tickets .trains .train .name_train .name{
+    border-radius: 20px;
+    width: 50px;
+    height: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.tickets .trains .train .schedules {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.tickets .trains .train .schedules .schedule {
+    display: flex;
+    margin: 0 10px;
+    justify-content: space-between;
+}
+.tickets .trains .train .schedules .schedule p{
+    margin: 0;
+}
+.tickets .trains .train .circles {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.tickets .trains .train .circles  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.tickets .trains .carriages{
+    margin: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+.tickets .trains .carriage{
+    margin: 10px 5px;
+}
+.tickets .img_carriage {
+    height: 25px; 
+    background: var(--blue-bland);
+    border-radius: 5px;
+}
+.tickets .trains .carriages .carriage p{
+    margin-bottom: 0;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.tickets .img_carriage:hover {
+    cursor: pointer;
+    background-color: var(--blue);
+}
+.tickets .img_carriage img {
+    width: 100%;
+    height: 130%;
+}
+.tickets .seats  .title{
+    margin: 25px 0;
+    text-align: center;
+    color: var(--blue);
+}
+.tickets .seats .chairs{
+    height: 207px;
+    border-radius: 10px;
+    border: 1px solid var(--blue);
+}
+.tickets .seats .chairs .chair_{
+    margin: 5px 0;
+    display: flex;
+    height: 95%;
+    justify-content: center;
+}
+.tickets .seats .chairs .chair_ .left_chair_{
+    margin: 15px 0;
+}
+.tickets .seats .chairs .chair_ ul{
+    margin: 5px;
+    padding: 0 24px;
+    display: flex;
+    list-style-type: none;
+
+}.tickets .seats .chairs .chair_ ul li{
+    margin: 0 5px;
+    height: 35px;
+    display: flex;
+}
+.tickets .seats .chairs .chair_vip{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.tickets .seats .chairs .chair_vip ul:nth-child(1){
+    display: flex;
+    flex-direction: column
+}
+.tickets .seats .chairs .chair_vip ul:nth-child(1) li{
+    margin: 5px 0;
+}
+.tickets .seats .chairs .chair_vip ul:nth-child(1) li{
+    border: none;
+}
+.tickets .seats .chairs .chair_vip ul{
+    display: flex;
+    list-style-type: none;
+}
+.tickets .seats .chairs .chair_vip ul li{
+    text-align: center;
+}
+.tickets .seats .chairs .chair_vip ul li .chair_T_{
+    height: 85%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+}
+.tickets .seats .chairs .chair_vip ul li .chair_T{
+    display: flex;
+}
+.tickets .seats .chairs .chair_vip ul li span{
+    font-size: 12px;
+}
+.tickets .seats .chairs .chair_vip ul li .chair_T{
+    padding: 5px 0;
+    border-left:2px solid var(--blue-dark) ;
+    border-right:2px solid var(--blue-dark) ;
+}
+
+.tickets .seats .chairs .chair_vip ul li .chair_T_line{
+    margin-top: -6px;
+    height: 10px;
+    border-left:  3px solid var(--blue-dark);
+    border-right:  3px solid var(--blue-dark);
+    border-bottom: 3px solid var(--blue-dark);
+    border-bottom-left-radius:  5px; 
+    border-bottom-right-radius:  5px; 
+}
+.tickets .seats .chairs .chair_vip ul li .chair{
+    margin: 0 3px;
+}
+.chair{
+    width: 30px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tickets .seats .chairs  .chair:hover{
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.tickets .btn_train {
+    text-align: center;
+}
+.tickets .btn_train input{
+    margin: 25px;
+    padding: 10px 30px;
+    font-weight: 600;
+    background-color: var(--blue);
+}
+.tickets .promotion{
+
+}
+.tickets .promotion .promotion_title{
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--blue);
+}
+.tickets .promotion .table th {
+    font-size: 24px;
+    width: 50%;
+    color: #818181 !important;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.tickets .promotion .table td{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.7px;
+    border: 1px solid #ccc;
+    color: rgba(0, 0, 0, 0.80);
+    font-style: normal;
+}
+.tickets .notepad{
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+.tickets .notepad .notepad_chairs{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.tickets .notepad .notepad_chairs .notepad_chair{
+    display: flex;
+    align-items: center;
+}
+.tickets .notepad .notepad_chairs .notepad_chair p{
+    margin: 0;
+}
+.tickets .notepad .notepad_carriage {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+}
+.tickets .notepad .notepad_carriage .carriage_{
+    display: flex;
+}
+.tickets .notepad .notepad_carriage .carriage_:nth-child(2) .img_carriage{
+    background-color: #a6b727;
+    
+}
+.tickets .notepad .notepad_carriage .carriage_:nth-child(3) .img_carriage{
+    background-color: rgba(223, 83, 39, 0.2);
+}
+.tickets .notepad .notepad_carriage .carriage_ p{
+    margin-left: 5px;
+}
+.tickets .attentions{
+    border-radius: 10px;
+    border: 1px solid var(--blue);
+    background-color: var(--blue-bland);
+}
+.tickets .attentions .attentions_{
+    padding: 20px;
+    color: var(--blue-dark);
+}
+.tickets .attentions .attentions_ .attention{
+    display: flex;
+}
+.tickets .attentions .attentions_ .attention a{
+    margin-left: 5px;
+    font-weight: 500;
+    color: var(--blue-dark);
+    text-decoration: none;
+}
+.find{
+    margin-left: 25px;
+}
+.find .itinerary,
+.find .cart{
+    border: 1px solid #ccc;
+}.find .itinerary .itinerary_header,
+.find .cart .cart_header{
+    padding: 5px 10px;
+    border-bottom:2px solid var(--blue-dark); 
+    display: flex;
+    align-items: center;
+    color: var(--blue-dark);
+    background-color: #e6e6e6;
+
+}
+.find .itinerary .itinerary_header i,
+.find .cart .cart_header i{
+    font-size: 16px;
+}.find .itinerary .itinerary_header h5,
+.find .cart .cart_header h5{
+    font-size: 16px;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+.find .cart .cart_content{
+    height: 200px;
+    overflow: overlay;
+    background-color: #fff;
+}
+.find .cart .cart_content>p{
+    font-weight: 500;
+    color: rgba(223, 83, 39);
+    text-align: center;
+}
+.find .cart .cart_content .ticked>div{
+    border-bottom: 1px solid #ccc;
+}
+.find .cart .cart_content .ticked .ticked_content>p{
+    font-size: 10px;
+    width: 120px;
+    font-weight: 400;
+    overflow: hidden;
+}
+.find .cart .cart_content .ticked p{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+}
+.find .cart .cart_content .ticked div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.find .cart .cart_content .ticked i {
+    font-size: 22px;
+}
+.find .cart .cart_content .ticked i:hover {
+    cursor: pointer;
+}
+.find .itinerary .itinerary_content form .itinerary_btn,
+.find .cart .itinerary_btn {
+    margin: 5px 0;
+    text-align: center;
+}
+.find .itinerary .itinerary_content form .itinerary_btn input,
+.find .cart .itinerary_btn input {
+    padding: 1px 10px;
+    border: 1px solid #ccc;
+    background-color: var(--blue);
+}
+.find .itinerary{
+    margin-top: 20px;
+}
+.find .itinerary .itinerary_content form{
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.find .itinerary .itinerary_content form .input_cal{
+    font-size: 14px;
+    position: relative;
+}
+.find .itinerary .itinerary_content form select,
+.find .itinerary .itinerary_content form .input_cal input{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--blue-dark);
+}
+
+.find .itinerary .itinerary_content form .input_cal i {
+    top: 0;
+    right: 0;
+    padding: 6px;
+    font-size: 25px;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: var(--blue);
+    color: #fff;
+}
+.find .itinerary .itinerary_content form .input_cal i:hover{
+    border: 1px solid var(--blue-dark);
+    cursor: pointer;
+    transition: outline-color 0.3s ease;
+}
+.find .itinerary .itinerary_content form .check {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* modal */
+.display_modal{
+    display: flex!important;
+}
+.modal{
+    background-color: rgba(170, 163, 163, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+.modal-header{
+    border-bottom: none!important;
+    display: block!important;
+    text-align: center;
+}
+.modal-title {
+    display: inline-block;
+}
+.modal-header .btn-close{
+    float: right;
+    top: 0;
+    right: 0;
+}
+.modal .modal-dialog{
+    width: 60% !important;
+    max-width: 60%!important;
+}
+.modal-footer{
+    border-top: none !important;
+}
+.bill{
+    display: flex;
+    justify-content: space-between;
+}
+thead tr th{
+    text-align: center;
+}
+.modal-body .bill p {
+    padding: 8px;
+    margin: 0;
+}
+.modal-body .img_qr img {
+    width: 150px;
+    float: right;
+}
